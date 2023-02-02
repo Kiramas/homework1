@@ -4,8 +4,8 @@ public class Main {
         SalesManager salesManager = new SalesManager(number);
         System.out.println("Максимум на сегодня " + salesManager.max());
 
-        int maxNum = number[0];
-        int minNum = number[0];
+        long maxNum = number[0];
+        long minNum = number[0];
 
         for (int i = 1; i < number.length; i++) {
             maxNum = Math.max(maxNum, number[i]);
@@ -19,7 +19,7 @@ public class Main {
             sum += number[i];
         }
 
-        int res;
+        long res;
         res = (sum - maxNum - minNum) / number.length;
         System.out.println("Обрезанное среднее: " + res);
     }
