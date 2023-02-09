@@ -14,4 +14,26 @@ public class SalesManager {
         }
         return max;
     }
+
+    public int croppedMiddle() {
+        int maxNum = 0;
+        int minNum = 0;
+
+        for (int i = 0; i < sales.length; i++) {
+            maxNum = Math.max(maxNum, sales[i]);
+        }
+
+        for (int i = 0; i < sales.length; i++) {
+            minNum = Math.min(minNum, sales[i]);
+        }
+        int sum = 0;
+        for (int i = 0; i < sales.length; i++) {
+            sum += sales[i];
+        }
+
+        int res;
+        res = (sum - maxNum - minNum) / sales.length;
+        System.out.println("Обрезанное среднее: " + res);
+        return res;
+    }
 }
