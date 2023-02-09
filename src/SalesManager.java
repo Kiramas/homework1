@@ -4,7 +4,7 @@ public class SalesManager {
     public SalesManager(long[] sales) {
         this.sales = sales;
     }
-    
+
     public long max() {
         long max = -1;
         for (long sale : sales) {
@@ -14,5 +14,4 @@ public class SalesManager {
         }
         return max;
     }
-
 }
